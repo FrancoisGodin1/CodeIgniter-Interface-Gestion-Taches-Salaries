@@ -2,7 +2,6 @@
 
 /** @property TachesModel $TachesModel
   
-
 /**
  * Description of Taches
  *
@@ -82,9 +81,7 @@ class Taches extends CI_Controller {
                 redirect('Taches/erreur/2');
             }
             // si la tache selectionnée dépasse la journée J
-            
             else{
-            
             $params = array('idEmploye' => $idEmploye,
                             'idTache' => $idTache
             );
@@ -155,9 +152,6 @@ class Taches extends CI_Controller {
        
      }
      
-
-    
-    
     public function delete($id) {
         $this->TachesModel->delete_tache_from_repartition($id);
         $this->TachesModel->delete($id);
@@ -234,5 +228,4 @@ class Taches extends CI_Controller {
             $this->load->view('TacheAdd',$data);
         }
     }
-
 }
